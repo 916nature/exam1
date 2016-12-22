@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Achieve</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+<header>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <%= link_to "ホーム", exams_path, class: "navbar-brand" %>
+      <%= link_to "通知", exams_path, class: "navbar-brand" %>
+      <%= link_to "メッセージ", exams_path, class: "navbar-brand" %>
+    </div>
+    
+  </div><!-- /.container-fluid -->
+</nav>
+</header>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<div id="page-top-btn" class="page-top-btn">
+  <p><a class="move-page-top" id="move-page-top">▲</a></p>
+</div>
+
+<div class="container">
+  <div class="center-block">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <h2>作成する</h2>
+
+    <%= render 'form' %>
+    <br>
+    <p><%= notice %></p>
+    
+    <h1>一覧</h1>
+      <% @exams.each do |exam| %>
+    <br>
+    <div class="row">
+      <CENTER>
+      <p><%= exam.content %></p>
+      <%= link_to "編集", edit_exam_path(exam.id), class: 'btn btn-default btn-sm btn-success' %>
+      <%= link_to "削除", exam_path(exam.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+      </CENTER>
+    </div>
+  <% end %>
+    <br>
+    <%= link_to "Achieve", root_path %>
+  </div>
+  </div>
+</div>
